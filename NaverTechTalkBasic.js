@@ -16,11 +16,10 @@ const log = console.log;
 const add = (a, b) => a + b;
 
 const f = (list, length) =>
-  reduce(
-    add,
-    0,
-    take(length, map(a => a * a, filter(a => a % 2, list))));
-
+  reduce(add, 0,
+      take(length, 
+        map(a => a * a, 
+          filter(a => a % 2, list))));
 
 // 특정한 값으로 축약을 해감.
 function reduce(f, acc, iter) {
